@@ -1,0 +1,16 @@
+const axios = require("axios");
+
+const options = {
+  method: 'GET',
+  url: 'https://unogs-unogs-v1.p.rapidapi.com/search/deleted',
+  headers: {
+    'X-RapidAPI-Key': '5f7c8d6027msh3953e395240351ap132ffcjsnc055b1415026',
+    'X-RapidAPI-Host': 'unogs-unogs-v1.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
